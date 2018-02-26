@@ -1,0 +1,250 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./revealjs/css/reveal.css">
+    <link rel="stylesheet" href="./revealjs/css/theme/black.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style media="screen">
+      .title{
+        color: white !important;
+        text-shadow: black 2px 2px 10px !important;
+        font-size: 100pt !important;/
+      }
+      .panel{
+        background-color: rgb(228, 228, 237);
+        padding: 20px !important;
+        border-radius: 10px;
+      }
+
+      .style-image{
+        border-style: none !important;
+        box-shadow: none !important;
+        background-color: transparent !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="./images/deep-learning.jpg">
+          <h1 class="title">Deep Learning</h1>
+        </section>
+        <section>
+          <table style="color:rgb(29, 35, 38); font-size:20pt;">
+            <tr>
+              <td>
+                <div class="panel">
+                  <p><span class="icons">&#xf2b9; </span>Émerson Silva</p>
+                  <p><span class="icons">&#xf19d; </span>Universidade Federal de Alagoas</p>
+                  <p><span class="icons">&#xf0e0; </span>emersonjose877@gmail.com</p>
+                  <p><span class="icons">&#xf09b; </span> <a href="https://www.github.com/silvaemerson">silvaemerson</a></p>
+                </div>
+              </td>
+
+              <td>
+                <div class="panel">
+                  <p><span class="icons">&#xf2b9; </span> Luís Eduardo G. França</p>
+                  <p><span class="icons">&#xf19d; </span>Universidade Federal de Alagoas</p>
+                  <p><span class="icons">&#xf0e0; </span>luiseduardogfranca@gmail.com</p>
+                  <p><span class="icons">&#xf09b; </span> <a href="https://www.github.com/luiseduardogfranca"> luiseduardogfranca</a></p>
+                </div>
+              </td>
+
+            </tr>
+          </table>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Introdução</h2>
+          </section>
+
+          <section>
+
+            <img src="./images/progress-deep.jpg" alt="Progress of deep learning">
+
+            <!-- <ul>
+              <li>Machine Learning usa de um conjunto de dados para criar regras de associação
+              para tanto para previsão quanto regressão</li>
+              <li>Deep Learning usufrui da grande evolução do hardware, principalmente na capacidade de processamento das GPUs, na última decáda, para a criação de estruturas complexas de regressão, classificação, classificação de imagens, etc.</li>
+            </ul> -->
+          </section>
+
+          <section data-background="#f7f7f7">
+            <img class="style-image" src="./images/difference.jpeg" alt="Difference between machine learning and deep learning">
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Tipos de arquitetura</h2>
+          </section>
+
+          <section>
+            <div style="text-align:justify;">
+              <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>MLP (Multilayer Perceptron)</p>
+              <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>CNN (Convolutional Neural Network)</p>
+              <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>RNN (Recurrent Neural Network)</p>
+              <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>GAN (Generative Adversarial Network)</p>
+            </div>
+
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Multilayer Perceptron</h2>
+          </section>
+          <section data-background="white">
+            <img class="style-image" src="./images/difference-between-neural-networks-deep-learning-neural-networks.png" alt="Diferença entre neural network e deep learning" width="1000">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Convolutional Neural Network</h2>
+          </section>
+          <section>
+            <p>Redes convolucionais são inspiradas na organização cortex visual animal</p>
+            <img style="background: transparent;" class="style-image" src="./images/cortex.png" alt="Cortex" width="700">
+          </section>
+          <section data-background="rgb(255, 255, 255)">
+            <p>Representação estrutural de uma CNN simples</p>
+            <img class="style-image" src="./images/direct.png" alt="Convolutional Neural Network" width="1500">
+          </section>
+          <section>
+            <h4>Aplicações de redes convolucionais</h4>
+
+            <div style="text-align:justify;">
+              <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Reconhecimento em vídeo</p>
+              <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Reconhecimento em imagens</p>
+              <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Processamento de linguagem natural</p>
+            </div>
+          </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Recurrent Neural Network</h2>
+            </section>
+          <section>
+              <div style="text-align:justify;">
+                <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Usadas em dados sequenciais(quando o contexto importa)</p>
+                <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>A saída depende das computações anteriores</p>
+              </div>
+          </section>
+          <section data-background="white">
+            <img class="style-image" src="./images/rnn.png" alt="Recurrent Neural Network">
+          </section>
+          <section data-background="white">
+            <p>Detalhamento de uma RNN</p>
+            <img class="style-image" src="./images/rnn-detail.png" alt="Detalhamento de uma RNN">
+          </section>
+          <section>
+            <h4>Aplicações de redes recorrentes</h4>
+
+            <div style="text-align:justify;">
+              <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Criação do automática de textos</p>
+              <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Classifcação de vídeos</p>
+              <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Tradução</p>
+            </div>
+          </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Generative Adversarial Network</h2>
+            </section>
+            <section>
+                <div style="text-align:justify;">
+                  <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Usa um gerador e um discriminador(classificador)</p>
+                  <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Aprimorar o gerador</p>
+                  <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Gerar dados perto da realidade</p>
+                </div>
+            </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>GPUs para Deep Learning</h2>
+          </section>
+          <section>
+            <img class="style-image" src="./images/gpu.png" alt="GPU on Deep Learning">
+          </section>
+
+          <section >
+            <div style="text-align:justify;">
+              <p class="fragment highlight-transparent" >
+                <span class="icons">&#xf101; </span>
+                A maior parte da computação em Deep Learning são operações matriciais
+              </p>
+              <p class="fragment highlight-transparent" >
+                <span class="icons">&#xf101; </span>
+                Executam todas essas operações em paralelo
+              </p>
+              <p class="fragment highlight-transparent">
+                <span class="icons">&#xf101; </span>
+                Elas possuem um grande número de núcleos
+              </p>
+              <p class="fragment highlight-transparent">
+                <span class="icons">&#xf101; </span>
+                Também possuem muita memória
+              </p>
+            </div>
+
+          </section>
+        </section>
+
+        <section >
+          <p>Por que <strong>Deep Learning</strong> está em alta agora?</p>
+          <video src="./videos/deep-learning.mp4" controls poster="posterimage.jpg">
+            <track src="./videos/legend.vtt" default kind="subtitles" srclang="en" label="English">
+          </video>
+        </section>
+
+        <section>
+          <section>
+            <h2>Referências</h2>
+          </section>
+          <section>
+            <div style="text-align:justify;">
+               <span class="icons">&#xf127; </span><a href="https://towardsdatascience.com/overview-of-gans-generative-adversarial-networks-part-i-ac78ec775e31">Overview of GANs (Generative Adversarial Networks) - Part I</a><br>
+
+               <span class="icons">&#xf127; </span><a href="https://www.xenonstack.com/blog/log-analytics-with-deep-learning-and-machine-learning">Log Analytics With Deep Learning And Machine Learning</a><br>
+
+               <span class="icons">&#xf127; </span><a href="https://medium.com/@shridhar743/a-beginners-guide-to-deep-learning-5ee814cf7706">A Beginners Guide to Deep Learning</a><br>
+
+               <span class="icons">&#xf127; </span><a href="https://towardsdatascience.com/generative-adversarial-networks-history-and-overview-7effbb713545">Generative Adversarial Networks- History and Overview</a><br>
+            </div>
+
+          </section>
+          <section>
+            <div style="text-align:justify;">
+               <span class="icons">&#xf127; </span><a href="https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464">The mostly complete chart of Neural Networks, explained</a><br>
+               <span class="icons">&#xf127; </span><a href="https://blogs.nvidia.com/blog/2016/07/29/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/">What’s the Difference Between Artificial Intelligence, Machine Learning, and Deep Learning?</a><br>
+               <span class="icons">&#xf127; </span><a href="https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2">Applied Deep Learning - Part 4: Convolutional Neural Networks</a><br>
+               <span class="icons">&#xf127; </span><a href="https://www.youtube.com/watch?v=1G0e-mR9a4k">Why Is Deep Learning Hot Right Now?</a><br>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="./revealjs/lib/js/head.min.js"></script>
+    <script src="./revealjs/js/reveal.js"></script>
+    <script type="text/javascript">
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        transition: 'slide'
+      })
+    </script>
+  </body>
+
+
+</html>

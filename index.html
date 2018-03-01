@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./revealjs/css/reveal.css">
-    <link rel="stylesheet" href="./revealjs/css/theme/black.css">
+    <link rel="stylesheet" href="./revealjs/css/theme/simple.css">
     <link rel="stylesheet" href="./css/style.css">
     <style media="screen">
       .title{
-        color: white !important;
-        text-shadow: black 2px 2px 10px !important;
-        font-size: 100pt !important;/
+        color: #b53202 !important;
+        font-size: 90pt !important;
       }
       .panel{
         background-color: rgb(228, 228, 237);
         padding: 20px !important;
+        font-size: 18pt !important;
         border-radius: 10px;
       }
 
@@ -22,14 +22,21 @@
         box-shadow: none !important;
         background-color: transparent !important;
       }
+
+      .effect-panel{
+        box-shadow: 5px 10px 20px rgb(32, 32, 31) !important;
+      }
     </style>
   </head>
 
   <body>
     <div class="reveal">
       <div class="slides">
-        <section data-background="./images/deep-learning.jpg">
-          <h1 class="title">Deep Learning</h1>
+        <section>
+          <h4 style="text-align:justify; color:rgba(255, 255, 255, 0.40)">Aplicativo</h4>
+          <h1 class="title">Face Recognition</h1>
+        </section>
+
         </section>
         <section>
           <table style="color:rgb(29, 35, 38); font-size:20pt;">
@@ -59,66 +66,131 @@
 
         <section>
           <section>
-            <h2>Face Recognition</h2>
+            <h2>Reconhecimento Facial</h2>
           </section>
 
           <section>
-              <h2>Steps</h2>
+              <h2>Passo a passo</h2>
               <div style="text-align:justify;">
-                <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Fiding all faces</p>
-                <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Pose and Projecting faces</p>
-                <p class="fragment highlight-transparent"> <span class="icons">&#xf101; </span>Encoding faces</p>
+                <p class="fragment highlight-transparent"> <span class="icons">&#xf138; </span>Encontrando todas as faces</p>
+                <p class="fragment highlight-transparent"> <span class="icons">&#xf138; </span>Posicionando e projetando faces  </p>
+                <p class="fragment highlight-transparent"> <span class="icons">&#xf138; </span>Codificando faces</p>
+                <p class="fragment highlight-transparent"> <span class="icons">&#xf138; </span>Encontrando o nome da pessoa da codificação</p>
               </div>
           </section>
         </section>
 
         <section>
           <section>
-            <h2>Fiding all faces</h2>
+            <h2>Encontrando todas as faces</h2>
           </section>
 
           <section>
-              <h4>HOG (Histogram of Oriented Gradients)</h4>
-              <img src="./images/hog_1.gif" alt="">
+            <p>Utilizando um método método inventado em 2005 chamado <a href="http://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf" target="_blank">HOG</a> (Histogram of Oriented Gradients)</p>
           </section>
 
           <section>
-              <img src="./images/hog_2.gif" alt="">
+            <p>Para cada pixel é analisado todos o que o rodeiam diretamente </p>
+            <img class="style-image" src="./images/hog_1.gif" alt="">
           </section>
 
           <section>
-              <img src="./images/hog_3.gif" alt="">
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Pose and Projecting faces</h2>
+            <p>O pixel é substituído por uma seta (gradiente) apontando para o lado mais escuro</p>
+            <img  class="style-image" src="./images/hog_2.gif" alt="">
           </section>
 
           <section>
-              <h4>Face landmark estimation</h4>
-              <img src="./images/landmarks_1.png" alt="">
+            <p>Neste exemplo foi analisado pequenos quadrados de 16x16 pixels e estes substituído pelo gradiente de maior influência</p>
           </section>
 
           <section>
-              <h4>Centralizing faces</h4>
-              <img src="./images/landmarks_2.png" alt="" style="background-color: white;">
+              <p>O que permitiu definir de forma mais precisa os traços na imagem com um número reduzido de informações</p>
+              <img  class="style-image" src="./images/hog_3.gif" alt="">
           </section>
         </section>
 
         <section>
           <section>
-            <h2>Encoding faces</h2>
+            <h2>Posicionando e projetando faces</h2>
           </section>
 
           <section>
-              <h4>Training Step</h4>
-              <img src="./images/face_encoding_1.png" alt="" style="height: 85%; background-color: white;">
+            <p>Estimando os pontos de referência na face</p>
+            <img class="style-image" src="./images/landmarks_1.png" alt="">
           </section>
 
           <section>
-              <img src="./images/face_encoding_2.png" alt="" style="background-color: white;">
+              <p>Centralizando a face</p>
+              <img  class="" src="./images/landmarks_2.png" alt="" style="background-color: white;">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Codificando a face</h2>
+          </section>
+
+          <section>
+            <h4>Etapa de treinamento</h4>
+            <img  src="./images/face_encoding_1.png" width="600" style="height: 85%; background-color: white;">
+          </section>
+
+          <section>
+            <p>É retornado a medida de cada parte capturada da face </p>
+            <img src="./images/face_encoding_2.png" alt="" style="background-color: white;">
+          </section>
+        </section>
+
+        <section>
+          <section>
+              <h2>Encontrando o nome da pessoa da codificação</h2>
+          </section>
+          <section>
+            <p>Busca na base de dados por face que possuem medidas mais próximas daquela que acabou de ser analisada</p>
+          </section>
+        </section>
+
+        <section data-background-color="white">
+          <section>
+            <h1>Aplicativo</h1>
+          </section>
+
+          <section>
+            <h2>Tecnologias utilizadas</h2>
+          </section>
+
+          <section>
+            <img class="style-image" src="./images/ionic-logo.png" alt="Logo Ionic">
+          </section>
+
+          <section>
+            <p style="color:rgb(68, 116, 251); text-align:justify;">"Ionic é a plataforma de aplicativos para desenvolvedores web. Crie incríveis aplicativos para dispositivos móveis, web e desktop com uma base de código compartilhada e padrões abertos da web."</p>
+            <p style="color:rgb(68, 116, 251); text-align:justify;">Com Ionic foi possivel o desenvolvimento do aplicativo de forma eficiente.</p>
+          </section>
+
+          <section>
+            <img class="style-image" src="./images/flask.png" alt="Logo Ionic">
+          </section>
+
+          <section>
+            <p style="text-align:justify;">"Flask é um pequeno framework web escrito em Python e baseado na biblioteca WSGI Werkzeug e na biblioteca de Jinja2".</p>
+            <p style="text-align:justify;">Com o Flask foi possível o desenvolvimento de uma API <a href="http://searchmicroservices.techtarget.com/definition/RESTful-API" target="_blank">RESTful</a>.</p>
+          </section>
+
+          <section>
+            <h2>Utilizando o aplicativo</h2>
+          </section>
+          <section>
+            <p>1º) Adicione uma imagem para ser treinada</p>
+            <img class="style-image effect-panel" src="./images/add-image.gif" width="300" alt="Add image">
+          </section>
+          <section>
+            <p>2º) Verifique se a imagem foi adicionada a lista de imagens</p>
+            <img class="style-image effect-panel" src="./images/list-image.gif" width="300" alt="Add image">
+          </section>
+          <section>
+            <p>Envie uma imagem para ser reconhecida</p>
+            <img class="style-image effect-panel" src="./images/recognition-face.gif" width="300" alt="Add image">
           </section>
         </section>
 
@@ -128,11 +200,9 @@
           </section>
           <section>
             <div style="text-align:justify;">
-               <span class="icons">&#xf127; </span><a href="https://github.com/ageitgey/face_recognition">Repositório do face_recognition</a><br>
-
-               <span class="icons">&#xf127; </span><a href="https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78">Machine Learning is Fun! Part 4: Modern Face Recognition with Deep Learning</a><br>
+              <span class="icons">&#xf127; </span><a href="https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78">Machine Learning is Fun! Part 4: Modern Face Recognition with Deep Learning</a><br>
+              <span class="icons">&#xf127; </span><a href="https://github.com/ageitgey/face_recognition">Repositório da biblioteca <strong>face_recognition</strong> </a><br>
             </div>
-
           </section>
         </section>
       </div>
